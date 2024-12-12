@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docker in 100 Seconds</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .sidebar {
+            max-height: fit-content;
+            background-color: #f7faff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .content {
+            width: 700px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        .summary-section {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .summary-header {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #333;
+        }
+        h1 {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+        h2 {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        p {
+            font-family: "Golos Text", sans-serif;
+            font-size: 1rem;
+            font-weight: 300;
+            color: #666;
+            line-height: 1.6;
+        }
+        iframe {
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <div class="summary-section">
+                <h1>Youtube Video Title</h1>
+                <div class="summary-header"><h2>Summary</h2></div>
+                <div class="summary-content"><p>{{ summary }}</p></div>
+                <div class="summary-header"><h2>Transcript</h2></div>
+                <div class="summary-content"><p>{{ transcript }}</p></div>
+            </div>
+        </div>
+        <div class="sidebar">
+            <iframe width="516" height="310" 
+                    src="{{ embed_url }}" 
+                    frameborder="0" allowfullscreen></iframe>
+        </div>        
+    </div>
+</body>
+</html>
